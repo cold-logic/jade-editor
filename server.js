@@ -1,10 +1,11 @@
-var express = require('express')
- ,  fs = require('fs')
- ,  path = require('path')
- ,  app = express()
+var express = require('express'),
+  bodyParser = require('body-parser'),
+  fs = require('fs'),
+  path = require('path'),
+  app = express();
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.bodyParser())
+app.use(bodyParser())
 app.set('view engine', 'jade')
 
 app.get('/', function (request, response) {
@@ -89,6 +90,6 @@ io.sockets.on('connection', function(client) {
 });
 */
 
-var port = 88
-app.listen(port)
-console.log('Jade-editor started on port ' + port)
+var port = 8800;
+app.listen(port);
+console.log('Jade-editor started on port ' + port);
