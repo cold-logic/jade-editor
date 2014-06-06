@@ -1,4 +1,3 @@
-template.find('.edit')
-.click(function(){
-    $(this).css('color', 'red')
-})
+template.find('.edit').click(function(){
+    $(this).css('color', 'red');
+});
